@@ -1,9 +1,3 @@
-'use client'
-// ------------ Components ----------------
-import Image from "next/image";
-import Link from "next/link"; // Import Next.js Link
-// ------------ Images ----------------
-import NotFoundImage from '../assets/svg/not-found.svg';
 
 const NotFound = () => {
   return (
@@ -14,13 +8,6 @@ const NotFound = () => {
             <div className="lg:max-w-xl lg:pr-5 relative">
               {/* Main Image */}
               <div className="relative mb-8">
-                <Image
-                  src={NotFoundImage}
-                  className="w-full h-auto opacity-50"
-                  width={300}
-                  height={300}
-                  alt="Space Illustration"
-                />
               </div>
 
               <p className="flex text-sm uppercase text-g1 dark:text-gray-600">404 Error</p>
@@ -35,14 +22,14 @@ const NotFound = () => {
               </p>
               <div className="mt-10 flex flex-col items-center md:flex-row">
                 {/* Next.js Link for "Go Home" */}
-                <Link
+                <a
                   href="/"
                   className="mb-3 inline-flex h-12 w-full items-center justify-center rounded bg-gray-400 px-6 font-medium tracking-wide text-white shadow-md transition duration-300 hover:bg-primary focus:outline-none md:mr-4 md:mb-0 md:w-auto"
                 >
                   Go Home
-                </Link>
+                </a>
                 {/* Next.js Link for "Contact Support" */}
-                <Link
+                <a
                   href="/support"
                   aria-label="Contact Support"
                   className="group inline-flex items-center font-semibold text-g1 dark:text-primary"
@@ -62,7 +49,7 @@ const NotFound = () => {
                       d="M17 8l4 4m0 0l-4 4m4-4H3"
                     ></path>
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
